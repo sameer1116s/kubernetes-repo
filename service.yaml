@@ -5,8 +5,9 @@ metadata:
 spec:
   selector:
     app: nginx
+  type: NodePort
   ports:
     - protocol: TCP
-      port: 80         # The port the service exposes externally
-      targetPort: 80   # The port the container is listening on
-  type: ClusterIP      # Changes to NodePort or LoadBalancer if needed
+      port: 80
+      targetPort: 80
+      nodePort: 30080
