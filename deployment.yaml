@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: sameer11s/my-app:021b50a510a129ac7ca3a39f6c023ab079103f33
+          image: sameer11s/my-app:85de65cfe916305733cadc4a6d10707cc4107e83
           ports:
             - containerPort: 80
