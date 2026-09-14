@@ -1,19 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+name: nginx-deployment
+
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-        - name: nginx
-          image: sameer11s/my-app:85de65cfe916305733cadc4a6d10707cc4107e83
-          ports:
-            - containerPort: 80
+replicas: 2
+
+selector:
+matchLabels:
+app: nginx
+
+template:
+metadata:
+labels:
+app: nginx
+
+```
+spec:
+  containers:
+    - name: nginx
+      image: sameer11s/my-app:021b50a510a129ac7ca3a39f6c023ab079103f33
+
+      ports:
+        - containerPort: 80
+```
