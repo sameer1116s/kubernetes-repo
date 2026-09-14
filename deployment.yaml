@@ -12,8 +12,12 @@ metadata:
 labels:
 app: nginx
 spec:
+  template:
+    spec:
+      containers:
+        - image: sameer11s/my-app:edf8f54e4714b25d24d261e3996e3bb81b7b9e83
 containers:
-- name: nginx
+  - name: nginx
 image: sameer11s/my-app:latest
 ports:
-- containerPort: 80
+  - containerPort: 80
