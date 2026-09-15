@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: webapp
+  namespace: default
 spec:
   replicas: 2
   selector:
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: sameer11s/my-app:083cad153fdad7cd7bb1b78318d2675549a26c43
+          image: sameer11s/my-app:latest
           ports:
             - containerPort: 80
